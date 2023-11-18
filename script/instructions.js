@@ -140,22 +140,50 @@ console.log(coolCars);
 
 
 // 17. Make use of a switch statement and create a possible soultion for no.16
+
+
 // 18.     USE A SWITCH statement!!!!!
 // A students Maths mark was 77%,their Physics marks was 70% and their English was 50%. You are required to calculate their average mark. Then we can check the average mark and return a messageto the console, if averageMark is :
 //         100%-80%(message = "You did well your average was ..."), 
 //         79%-70%(message="You average was good, it was ..."),
 //         69%-50%(message='Your average was okay, it was ..'), 
 //         49%-0% (message ='You must work harder next time')
+let averageMark = 100;
+switch (averageMark){
+    case 100 <= 80:
+        console.log(`You did well your average was ${averageMark}`);
+    break;
+    case 79 <= 70:
+        console.log(`You average was good, it was ${averageMark}`);
+    break;
+    case 69 <= 50:
+        console.log(`Your average was okay, it was ${averageMark}`);
+    break;
+    default:
+        console.log("You must work harder next time.");
+}
+
 // 19. USE the variable that you created in question 9 and use a while loop to print each iteration to the console and at that same instance, increase the variable used by 1
+
+
 // 20. USE while or a do while loop to print out the array of Question15(coolCars).
+
+
 // 21. Create an object called chair and give it a 
 //         property of legs and a value of 4,
 //         a secondProperty of material with a value of plastic
+
+
 // 22. Write the code that adds a property of 
 //         'armRestBars' with a value of 'none' 
 //         to the chair object.
+
+
 // 23.1.   What code will I write to view the value of the armRestBars.
+
+
 // 23.2    What code can I use to delete the property of legs with the value of 4.
+
 
 // 24. Create an factory function that can be used to return objects of electrical devices.
 //         the factory function should include the properties of 
@@ -163,7 +191,11 @@ console.log(coolCars);
 //         type,
 //         year,
 //         description
+
+
 // 24. Create 4 objects of your choice using a factory function and console.log() each of them
+
+
 // 25. Create a constructor function to make an object of different car, types the properties should include,
 //         this.brand,
 //         this.model,
@@ -171,11 +203,24 @@ console.log(coolCars);
 //         this.transmission,
 //         this.drivetrains
 
+
 // 26. Create 4 objects of your own and print to the console all of the created objects.
+
+
 // 27. After, push the 4 objects to an array called 'informationAboutCars'.
+
+
 // 28. Create a function that can be used 'globally', the function should return a sentence containing all the properties used inside the object, eg 'The car brand Ford has a model of a Figo that was produced in 2019. It is a manual and is a front wheel drive'
+
+
 // 29. Make sure to write the above sentences for each car inside the corresponding h4 elements
+
+
 // 30. Use the array in question10 that you created and create a conditional statement that check if 'BMW' appears in the array. The console should return 'This item does appear in the array' or 'The item does not appear in the array'
+
+
 // 31. Declare an array and give it a value of [5, 18, 14, 16, 2, 1].
 //     Create a program that returns the middle value of the current array, if array length is even return 2 numbers, if the array lengthis odd return 1 number
+
+
 // 32. Go back to Question 16 and use the conditional statement you created. The age has to be requested from the user and the message ust be written to the html page in the corresponding element
