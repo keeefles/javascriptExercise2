@@ -120,13 +120,25 @@ coolCars[3] = "Lamborghini";
 console.log(coolCars);
 
 // 12. Use a for loop to loop through the array, and console.log every value inside of the array.
+
+
 // 13. Reverse the array and console.log the reversed array.
+console.log(coolCars.reverse());
+
 // 14. Write the code to remove the last item in the array(coolCars not the reversed array) and store it in a variable....which means your array of coolCars must look like : ['BMW','Bugati','Ferrari','Lamborghini]
+console.log(coolCars.reverse());
+coolCars.splice(4, 1)
+console.log(coolCars);
+
 // 15. Now write the code to use the variable you made in no.14 and add it to the FRONT of the array. Your coolCars array should now look like:
 // [ 'Mercedes', 'BMW', 'Bugati', 'Ferrari', 'Lamborghini']
+coolCars.splice(0, 0, 'Mercedes')
+console.log(coolCars);
 
 //             Time to SWITCH it up a bit
 // 16. Write a simple conditional statement that will check if someone is younger than 18 or older than 18. The variable will be called age = 18 then a=17 to check
+
+
 // 17. Make use of a switch statement and create a possible soultion for no.16
 // 18.     USE A SWITCH statement!!!!!
 // A students Maths mark was 77%,their Physics marks was 70% and their English was 50%. You are required to calculate their average mark. Then we can check the average mark and return a messageto the console, if averageMark is :
