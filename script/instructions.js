@@ -138,9 +138,13 @@ console.log(coolCars);
 //             Time to SWITCH it up a bit
 // 16. Write a simple conditional statement that will check if someone is younger than 18 or older than 18. The variable will be called age = 18 then a=17 to check
 
-
 // 17. Make use of a switch statement and create a possible soultion for no.16
-
+let age = 18;
+if(age > 17){
+  console.log("You are 18!");
+} else {
+  console.log("You are younger than 18");
+}
 
 // 18.     USE A SWITCH statement!!!!!
 // A students Maths mark was 77%,their Physics marks was 70% and their English was 50%. You are required to calculate their average mark. Then we can check the average mark and return a messageto the console, if averageMark is :
@@ -148,19 +152,25 @@ console.log(coolCars);
 //         79%-70%(message="You average was good, it was ..."),
 //         69%-50%(message='Your average was okay, it was ..'), 
 //         49%-0% (message ='You must work harder next time')
-let averageMark = 100;
-switch (averageMark){
-    case 100 <= 80:
+let marks = [77, 70, 50]
+let sum = 0;
+marks.forEach(function(num) { sum += num });
+average = sum / marks.length;
+console.log(average);
+
+let averageMark = 66
+switch (true){
+    case averageMark < 100:
         console.log(`You did well your average was ${averageMark}`);
     break;
-    case 79 <= 70:
+    case averageMark <= 70:
         console.log(`You average was good, it was ${averageMark}`);
     break;
-    case 69 <= 50:
+    case averageMark <= 50:
         console.log(`Your average was okay, it was ${averageMark}`);
-    break;
     default:
-        console.log("You must work harder next time.");
+        console.log(`You must work harder next time ${averageMark}`);
+    break;
 }
 
 // 19. USE the variable that you created in question 9 and use a while loop to print each iteration to the console and at that same instance, increase the variable used by 1
