@@ -154,22 +154,26 @@ if(age > 17){
 //         49%-0% (message ='You must work harder next time')
 let marks = [77, 70, 50]
 let sum = 0;
-marks.forEach(function(num) { sum += num });
-average = sum / marks.length;
+marks.forEach(function(num) {sum += num});
+let average = sum / marks.length;
 console.log(average);
 
 let averageMark = 66
 switch (true){
-    case averageMark < 100:
-        console.log(`You did well your average was ${averageMark}`);
+    case averageMark <= 49:
+        console.log(`You must work harder next time ${averageMark}`);
+        break;
+    case averageMark <= 69:
+        console.log(`Your average was okay, it was ${averageMark}`);
     break;
-    case averageMark <= 70:
+    case averageMark <= 79:
         console.log(`You average was good, it was ${averageMark}`);
     break;
-    case averageMark <= 50:
-        console.log(`Your average was okay, it was ${averageMark}`);
-    default:
-        console.log(`You must work harder next time ${averageMark}`);
+    case averageMark <= 100:
+        console.log(`You did well your average was ${averageMark}`);
+    break;
+    default: 
+        console.log('enter a valid number');
     break;
 }
 
@@ -182,18 +186,23 @@ switch (true){
 // 21. Create an object called chair and give it a 
 //         property of legs and a value of 4,
 //         a secondProperty of material with a value of plastic
-
+let chair = {
+    legs: 4,
+    material: 'plastic'
+}
+console.log(chair);
 
 // 22. Write the code that adds a property of 
 //         'armRestBars' with a value of 'none' 
 //         to the chair object.
-
+chair['armRestBars'] = 'none';
 
 // 23.1.   What code will I write to view the value of the armRestBars.
-
+console.log(chair.armRestBars);
 
 // 23.2    What code can I use to delete the property of legs with the value of 4.
-
+delete chair['legs']
+console.log(chair);
 
 // 24. Create an factory function that can be used to return objects of electrical devices.
 //         the factory function should include the properties of 
@@ -201,9 +210,21 @@ switch (true){
 //         type,
 //         year,
 //         description
-
+function device(name, type, year, description) {
+    return{
+        name, type, year, description
+    }
+}
 
 // 24. Create 4 objects of your choice using a factory function and console.log() each of them
+let device1 = device('Samsung S23 Ultra', 'Cell Phone', 2023, "It's literally just a phone...")
+let device2 = device('Samsung Fridge', 'Fridge', 2023, "It's literally just a fridge...")
+let device3 = device('Samsung Microwave', 'Microwave', 2023, "It's literally just a microwave...")
+let device4 = device('Samsung Laptop', 'Laptop', 2023, "It's literally just a laptop...")
+console.log(device1);
+console.log(device2);
+console.log(device3);
+console.log(device4);
 
 
 // 25. Create a constructor function to make an object of different car, types the properties should include,
@@ -212,13 +233,35 @@ switch (true){
 //         this.year,
 //         this.transmission,
 //         this.drivetrains
-
+function car(brand, model, year, transmission, drivetrains) {
+    this.brand = brand
+    this.model = model
+    this.year = year
+    this.transmission = transmission
+    this.drivetrains = drivetrains
+    return this
+}
 
 // 26. Create 4 objects of your own and print to the console all of the created objects.
+let car1 = new car('Hyundai', 'Grand i10', 2022, 'Manual, Automatic', 'Front-Wheel Drive')
+let car2 = new car('Ford', 'EcoSport', 2019, 'Manual, Automatic', 'Front-Wheel Drive')
+let car3 = new car('Audi', 'R8', 2022, 'Manual, Automatic', 'Front-Wheel Drive')
+let car4 = new car('McLaren', 'Senna', 2019, 'Manual', 'Rear-Wheel Drive')
 
+console.log(car1);
+console.log(car2);
+console.log(car3);
+console.log(car4);
 
 // 27. After, push the 4 objects to an array called 'informationAboutCars'.
-
+let informationAboutCars=[];
+let cars = {};
+car.brand = 'Hyundai', 'Ford', 'Audi', 'McLaren';
+car.model = 'Grand i10', 'EcoSport', 'R8', 'Senna';
+car.year = 2022, 2019, 2022, 2019
+car.transmission = 'Manual, Automatic', 'Manual, Automatic', 'Manual, Automatic','Manual';
+car.drivetrains = 'Front-Wheel Drive', 'Front-Wheel Drive', 'Front-Wheel Drive', 'Rear-Wheel Drive';
+informationAboutCars.push(cars);
 
 // 28. Create a function that can be used 'globally', the function should return a sentence containing all the properties used inside the object, eg 'The car brand Ford has a model of a Figo that was produced in 2019. It is a manual and is a front wheel drive'
 
