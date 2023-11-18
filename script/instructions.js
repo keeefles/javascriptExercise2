@@ -30,8 +30,10 @@ document.getElementsByTagName('p')[1]
 // So far you have hints, however the hints have lessened.
 // 5.1. Attach the first input to a variable
 let input1 = document.querySelector('[data-firstMultiply]').value
+
 // 5.2. Attach the second input to a variable
 let input2 = document.querySelector('[data-secondMultiply]').value
+
 // 5.3. Attach the FIRST button to a variable(going to add an eventListener to button)
 const multiply =
 document.querySelector('[data-calculate1]')
@@ -64,17 +66,20 @@ let input3 = document.querySelector('[data-firstModulus]').value
 let input4 = document.querySelector('[data-secondModulus]').value
 
 // 6.3 Set the SECOND span to a varable(will display answer)
-let result2 = document.querySelector('[data-first]')
+let result2 = document.querySelector('[data-second]')
 
 // 6.4 Set the SECOND button to a variable(to run event listener)
+const divide = document.querySelector('[data-calculate2]')
+
 // 6.5 Create a normal function to calculate the modulus of the inputs
 function divideBy() {
     num1 = document.querySelector('[data-firstModulus]').value;
     num2 = document.querySelector('[data-secondModulus]').value;
-    document.querySelector('[data-first]').innerHTML = num1 / num2;
+    document.querySelector('[data-second]').innerHTML = num1 / num2;
 }
 
 // 6.6 Add an event listener to the button which will run the function you created
+modulus.addEventListener('click', divideBy)
 
 // Hmmm......That wasn't too bad....I knew you could do it! I believe in you.
 // You should now have an idea of the steps neccesary to complete actions using DOM manipulation.
