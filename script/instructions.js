@@ -69,7 +69,7 @@ let input4 = document.querySelector('[data-secondModulus]').value
 let result2 = document.querySelector('[data-second]')
 
 // 6.4 Set the SECOND button to a variable(to run event listener)
-const divide = document.querySelector('[data-calculate2]')
+const divide = document.getElementById('calculate2')
 
 // 6.5 Create a normal function to calculate the modulus of the inputs
 function divideBy() {
@@ -79,24 +79,46 @@ function divideBy() {
 }
 
 // 6.6 Add an event listener to the button which will run the function you created
-modulus.addEventListener('click', divideBy)
+divide.addEventListener('click', divideBy)
 
 // Hmmm......That wasn't too bad....I knew you could do it! I believe in you.
 // You should now have an idea of the steps neccesary to complete actions using DOM manipulation.
 
 // Okay now that you are aware of the steps needed, try no 7
 // 7.1 Change the text of 'Bubble Tea' to 'White Tea'
+document.getElementById('bubbleTea').innerText = "White Tea";
+
 // 7.2 Change the text of 'Green Tea' to 'Black tea'
+document.getElementsByClassName('greenTea')[0].innerText = "Black Tea";
+
 // 7.3 Change the text of 'Iced Tea' to 'Herbal Tea'
+let tea = document.querySelector('[data-icedTea]').innerHTML = "Herbal Tea";
 
 // You're eating Javascript, and again....I'm proud of you!
 
 // 8. Declare a variable called lastName and add a value to it(value must be a string)
+let lastName = 'Jones'
+console.log(lastName);
+
 // 9. Declare a variable called parentsAge and give it a value of 20(value must be a number)
+let parentsAge = 20
+console.log(parentsAge);
+
 // 10. Create an array with called coolCars and give it the following value: ['BMW','Bugati','Ferrari','McLaren', 'Mercedes']
+let coolCars = [
+    'BMW',
+    'Bugatti',
+    'Ferrari',
+    'McLaren',
+    'Mercedes'
+]
+console.log(coolCars);
 
 //             Now to manipulate the arrays. ;)
 // 11. Write the code to change the 'McLaren' value to 'Lamborghini' in the array Hint: use indexing to access different values in arrays
+coolCars[3] = "Lamborghini";
+console.log(coolCars);
+
 // 12. Use a for loop to loop through the array, and console.log every value inside of the array.
 // 13. Reverse the array and console.log the reversed array.
 // 14. Write the code to remove the last item in the array(coolCars not the reversed array) and store it in a variable....which means your array of coolCars must look like : ['BMW','Bugati','Ferrari','Lamborghini]
