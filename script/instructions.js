@@ -10,15 +10,14 @@
 
 // 1. Use the following id="heading" to change the heading(This is the main heading) of the html to 'Javascript', DO NOT USE QUERY SELECTOR
 let header = document.getElementById('heading')
-header.innerHTML = ("Javascript")
+header.innerText = ("Javascript")
 
 // 2. Use the class='paragraph' and change the information to 'This is a language I have mastered and I am proud of myself. I complished this because I believed in myself'
-
 document.querySelector('.paragraph').textContent = "This is a language I have mastered and I am proud of myself. I complished this because I believed in myself";
 
 // 3. Use the h3 element and change the heading(Subheading) to 'Things I've accomplished so far'. Hint: use querySelector
 let h3 = document.querySelector("h3")
-h3.innerHTML = ("Things I've accomplished so far")
+h3.innerText = ("Things I've accomplished so far")
 
 // 4. Change the paragraph below Question3(above) to 'I have discovered that I can accomplish anything I put my mind to'Hint: Use querySelectorAll and index or use getElementByTagName and index
 document.getElementsByTagName('p')[1]
@@ -46,7 +45,7 @@ let result1 = document.querySelector('[data-first]')
 function multiplyBy() {
     num1 = document.querySelector('[data-firstMultiply]').value;
     num2 = document.querySelector('[data-secondMultiply]').value;
-    document.querySelector('[data-first]').innerHTML = num1 * num2;
+    document.querySelector('[data-first]').innerText = num1 * num2;
 }
 
 // 5.6. Add an event listener to the button that runs the function that tyou created
@@ -92,7 +91,7 @@ document.getElementById('bubbleTea').innerText = "White Tea";
 document.getElementsByClassName('greenTea')[0].innerText = "Black Tea";
 
 // 7.3 Change the text of 'Iced Tea' to 'Herbal Tea'
-let tea = document.querySelector('[data-icedTea]').innerHTML = "Herbal Tea";
+let tea = document.querySelector('[data-icedTea]').innerText = "Herbal Tea";
 
 // You're eating Javascript, and again....I'm proud of you!
 
@@ -243,9 +242,9 @@ function car(brand, model, year, transmission, drivetrains) {
 }
 
 // 26. Create 4 objects of your own and print to the console all of the created objects.
-let car1 = new car('Hyundai', 'Grand i10', 2022, 'Manual, Automatic', 'Front-Wheel Drive')
-let car2 = new car('Ford', 'EcoSport', 2019, 'Manual, Automatic', 'Front-Wheel Drive')
-let car3 = new car('Audi', 'R8', 2022, 'Manual, Automatic', 'Front-Wheel Drive')
+let car1 = new car('Hyundai', 'Grand i10', 2022, 'Manual', 'Front-Wheel Drive')
+let car2 = new car('Ford', 'EcoSport', 2019, 'Manual', 'Front-Wheel Drive')
+let car3 = new car('Audi', 'R8', 2022, 'Manual', 'Front-Wheel Drive')
 let car4 = new car('McLaren', 'Senna', 2019, 'Manual', 'Rear-Wheel Drive')
 
 console.log(car1);
@@ -259,11 +258,26 @@ let cars = {};
 car.brand = 'Hyundai', 'Ford', 'Audi', 'McLaren';
 car.model = 'Grand i10', 'EcoSport', 'R8', 'Senna';
 car.year = 2022, 2019, 2022, 2019
-car.transmission = 'Manual, Automatic', 'Manual, Automatic', 'Manual, Automatic','Manual';
+car.transmission = 'Manual', 'Manual', 'Manual','Manual';
 car.drivetrains = 'Front-Wheel Drive', 'Front-Wheel Drive', 'Front-Wheel Drive', 'Rear-Wheel Drive';
 informationAboutCars.push(cars);
 
 // 28. Create a function that can be used 'globally', the function should return a sentence containing all the properties used inside the object, eg 'The car brand Ford has a model of a Figo that was produced in 2019. It is a manual and is a front wheel drive'
+function carName(brand, model, year, transmission, drivetrains) {
+    return{
+        brand: brand,
+        model: model,
+        year: year,
+        transmission: transmission,
+        drivetrains: drivetrains
+    }
+}
+let hyundai = carName('Hyundai', 'Grand i10', 2022, 'Manual', 'Front-Wheel Drive')
+let ford = carName('Ford', 'EcoSport', 2019, 'Manual', 'Front-Wheel Drive')
+let audi = carName('Audi', 'R8', 2022, 'Manual', 'Front-Wheel Drive')
+let mclaren = carName('McLaren', 'Senna', 2019, 'Manual', 'Rear-Wheel Drive')
+
+console.log(`The car brand ${brand} has a model of a ${model} that was produced in ${year}. It is a ${transmission} and is a ${drivetrains}`);
 
 
 // 29. Make sure to write the above sentences for each car inside the corresponding h4 elements
