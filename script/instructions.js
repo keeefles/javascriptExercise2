@@ -242,9 +242,9 @@ function car(brand, model, year, transmission, drivetrains) {
 }
 
 // 26. Create 4 objects of your own and print to the console all of the created objects.
-let car1 = new car('Hyundai', 'Grand i10', 2022, 'Manual, Automatic', 'Front-Wheel Drive')
-let car2 = new car('Ford', 'EcoSport', 2019, 'Manual, Automatic', 'Front-Wheel Drive')
-let car3 = new car('Audi', 'R8', 2022, 'Manual, Automatic', 'Front-Wheel Drive')
+let car1 = new car('Hyundai', 'Grand i10', 2022, 'Manual', 'Front-Wheel Drive')
+let car2 = new car('Ford', 'EcoSport', 2019, 'Manual', 'Front-Wheel Drive')
+let car3 = new car('Audi', 'R8', 2022, 'Manual', 'Front-Wheel Drive')
 let car4 = new car('McLaren', 'Senna', 2019, 'Manual', 'Rear-Wheel Drive')
 
 console.log(car1);
@@ -258,11 +258,26 @@ let cars = {};
 car.brand = 'Hyundai', 'Ford', 'Audi', 'McLaren';
 car.model = 'Grand i10', 'EcoSport', 'R8', 'Senna';
 car.year = 2022, 2019, 2022, 2019
-car.transmission = 'Manual, Automatic', 'Manual, Automatic', 'Manual, Automatic','Manual';
+car.transmission = 'Manual', 'Manual', 'Manual','Manual';
 car.drivetrains = 'Front-Wheel Drive', 'Front-Wheel Drive', 'Front-Wheel Drive', 'Rear-Wheel Drive';
 informationAboutCars.push(cars);
 
 // 28. Create a function that can be used 'globally', the function should return a sentence containing all the properties used inside the object, eg 'The car brand Ford has a model of a Figo that was produced in 2019. It is a manual and is a front wheel drive'
+function carName(brand, model, year, transmission, drivetrains) {
+    return{
+        brand: brand,
+        model: model,
+        year: year,
+        transmission: transmission,
+        drivetrains: drivetrains
+    }
+}
+let hyundai = carName('Hyundai', 'Grand i10', 2022, 'Manual', 'Front-Wheel Drive')
+let ford = carName('Ford', 'EcoSport', 2019, 'Manual', 'Front-Wheel Drive')
+let audi = carName('Audi', 'R8', 2022, 'Manual', 'Front-Wheel Drive')
+let mclaren = carName('McLaren', 'Senna', 2019, 'Manual', 'Rear-Wheel Drive')
+
+console.log(`The car brand ${brand} has a model of a ${model} that was produced in ${year}. It is a ${transmission} and is a ${drivetrains}`);
 
 
 // 29. Make sure to write the above sentences for each car inside the corresponding h4 elements
