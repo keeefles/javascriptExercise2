@@ -10,15 +10,14 @@
 
 // 1. Use the following id="heading" to change the heading(This is the main heading) of the html to 'Javascript', DO NOT USE QUERY SELECTOR
 let header = document.getElementById('heading')
-header.innerHTML = ("Javascript")
+header.innerText = ("Javascript")
 
 // 2. Use the class='paragraph' and change the information to 'This is a language I have mastered and I am proud of myself. I complished this because I believed in myself'
-
 document.querySelector('.paragraph').textContent = "This is a language I have mastered and I am proud of myself. I complished this because I believed in myself";
 
 // 3. Use the h3 element and change the heading(Subheading) to 'Things I've accomplished so far'. Hint: use querySelector
 let h3 = document.querySelector("h3")
-h3.innerHTML = ("Things I've accomplished so far")
+h3.innerText = ("Things I've accomplished so far")
 
 // 4. Change the paragraph below Question3(above) to 'I have discovered that I can accomplish anything I put my mind to'Hint: Use querySelectorAll and index or use getElementByTagName and index
 document.getElementsByTagName('p')[1]
@@ -46,7 +45,7 @@ let result1 = document.querySelector('[data-first]')
 function multiplyBy() {
     num1 = document.querySelector('[data-firstMultiply]').value;
     num2 = document.querySelector('[data-secondMultiply]').value;
-    document.querySelector('[data-first]').innerHTML = num1 * num2;
+    document.querySelector('[data-first]').innerText = num1 * num2;
 }
 
 // 5.6. Add an event listener to the button that runs the function that tyou created
@@ -92,7 +91,7 @@ document.getElementById('bubbleTea').innerText = "White Tea";
 document.getElementsByClassName('greenTea')[0].innerText = "Black Tea";
 
 // 7.3 Change the text of 'Iced Tea' to 'Herbal Tea'
-let tea = document.querySelector('[data-icedTea]').innerHTML = "Herbal Tea";
+let tea = document.querySelector('[data-icedTea]').innerText = "Herbal Tea";
 
 // You're eating Javascript, and again....I'm proud of you!
 
